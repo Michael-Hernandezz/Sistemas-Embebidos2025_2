@@ -4,7 +4,7 @@
 
 DS1307 lib\ds1307.c
 
-DS1307 lib\I2C_LIB.c
+I2C_lib\I2C_LIB.c
 
 main.c
 

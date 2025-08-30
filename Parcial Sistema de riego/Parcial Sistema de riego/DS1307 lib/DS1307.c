@@ -1,5 +1,5 @@
 ﻿#include "ds1307.h"
-#include "I2C_LIB.h"
+#include "../I2C_lib/I2C_LIB.h"
 
 // Inicializa el DS1307
 void ds1307_init(void) {

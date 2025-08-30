@@ -128,10 +128,10 @@
     <Compile Include="DS1307 lib\ds1307.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="DS1307 lib\I2C_LIB.c">
+    <Compile Include="I2C_lib\I2C_LIB.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="DS1307 lib\I2C_LIB.h">
+    <Compile Include="I2C_lib\I2C_LIB.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
@@ -140,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DS1307 lib" />
+    <Folder Include="I2C_lib" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

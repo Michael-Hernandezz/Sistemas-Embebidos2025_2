@@ -33,13 +33,14 @@ LINKER_SCRIPT_DEP:=
 
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
-../DS1307\ lib
+../DS1307\ lib \
+../I2C_lib
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../DS1307\ lib/ds1307.c \
-../DS1307\ lib/I2C_LIB.c \
+../I2C_lib/I2C_LIB.c \
 ../main.c
 
 
@@ -51,22 +52,22 @@ ASM_SRCS +=
 
 OBJS +=  \
 DS1307\ lib/ds1307.o \
-DS1307\ lib/I2C_LIB.o \
+I2C_lib/I2C_LIB.o \
 main.o
 
 OBJS_AS_ARGS +=  \
 "DS1307 lib/ds1307.o" \
-"DS1307 lib/I2C_LIB.o" \
+I2C_lib/I2C_LIB.o \
 main.o
 
 C_DEPS +=  \
 DS1307\ lib/ds1307.d \
-DS1307\ lib/I2C_LIB.d \
+I2C_lib/I2C_LIB.d \
 main.d
 
 C_DEPS_AS_ARGS +=  \
 "DS1307 lib/ds1307.d" \
-"DS1307 lib/I2C_LIB.d" \
+I2C_lib/I2C_LIB.d \
 main.d
 
 OUTPUT_FILE_PATH +=Parcial\ Sistema\ de\ riego.elf
@@ -90,7 +91,7 @@ DS1307\ lib/ds1307.o: ../DS1307\ lib/ds1307.c
 	@echo Finished building: $<
 	
 
-DS1307\ lib/I2C_LIB.o: ../DS1307\ lib/I2C_LIB.c
+I2C_lib/I2C_LIB.o: ../I2C_lib/I2C_LIB.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega1284p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega1284p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
