@@ -1,0 +1,65 @@
+{
+  "project": {
+    "name": "",
+    "version": "1.0.0",
+    "description": "Sistema de almacenamiento de energia con monitoreo remoto",
+    "author": "Michael-Hernandezz, JuanRP, JoseDCamp",
+    "organization": "UCEVA",
+    "created_at": "2025-10-5"
+  },
+  "hardware": {
+    "microcontroller": "ESP32-S3",
+    "sensors": [
+      {
+        "id": "Sensor Corriente 01",
+        "type": "INA260",
+        "pins": {
+          "data": "Undefined",
+          "clock": "Undefined"
+        },
+        "unit": "A"
+      },
+      {
+        "id": "Sensor Voltaje 01",
+        "type": "INA260",
+        "pins": {
+          "data": "Undefined",
+          "clock": "Undefined"
+        },
+        "unit": "V"
+      },
+
+      {
+        "id": "Sensor Corriente 02",
+        "type": "INA260",
+        "pins": {
+          "data": "Undefined",
+          "clock": "Undefined"
+        },
+        "unit": "A"
+      }
+    ]
+
+  },
+  "network": {
+    "wifi": {
+      "ssid": "Undefined",
+      "password": "Undefined",
+      "reconnect_interval_s": 30
+    },
+    "influxdb": {
+      "url": "https://influxdb.your-domain.net",
+      "token": "your-influxdb-token",
+      "org": "your-org",
+      "bucket": "Docker",
+      "port": 8086
+    }
+  },
+    "Grafana": {
+    "url": "https://grafana.your-domain.net",
+    "token": "your-grafana-token",
+    "org": "your-org",
+    "dashboard": "Docker",
+    "port": 3000
+  }
+}
